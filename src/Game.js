@@ -3,7 +3,7 @@ import React from 'react';
 
 
 function Square(props) {
-  return ( 
+  return (
     <button className="square" onClick={props.onClick}>
       {props.value}
     </button>
@@ -14,8 +14,8 @@ class Board extends React.Component {
 
   renderSquare(i) {
     return (
-      <Square 
-        value={this.props.squares[i]} 
+      <Square
+        value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
     );
@@ -106,18 +106,22 @@ class Game extends React.Component {
     }
 
     return (
+      <>
+      <h1 className="title"> TIC-TAC-TOE</h1>
       <div className="game">
         <div className="game-board">
-          <Board 
+          <div>{status}</div>
+          <Board
             squares={current.squares}
             onClick={(i) => this.handleClick(i)}
           />
         </div>
         <div className="game-info">
-          <div>{status}</div>
+
           <ol>{moves}</ol>
         </div>
       </div>
+      </>
     );
   }
 }
@@ -144,7 +148,7 @@ function calculateWinner(squares) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
-    } 
+    }
   }
   return null;
 }

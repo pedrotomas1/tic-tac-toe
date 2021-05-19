@@ -1,6 +1,7 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  border: 1px solid pink;
 }
 
 ol, ul {
@@ -14,6 +15,7 @@ ol, ul {
 }
 
 .status {
+  border: 1px solid pink;
   margin-bottom: 10px;
 }
 
@@ -42,9 +44,24 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-board {
+  border: 1px solid pink;
+  margin-left: 10px;
+  background-color: yellow;
+
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
